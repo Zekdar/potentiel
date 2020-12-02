@@ -1,0 +1,23 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - run: npm ci
+      - run: npm test
+      - run: npm run test-int-init-db
+      - run: npm run test-int
+      - run: npm run build
+      - run: git remote add clever git+ssh://git@push-rbx-clevercloud-customers.services.clever-cloud.com/app_eeb6121a-65e3-4085-b85a-a56c986c680c.git && git push clever master
