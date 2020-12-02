@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_eeb6121a-65e3-4085-b85a-a56c986c680c",
+      "org_id": "orga_8c6d7062-7109-4c49-8cb8-5e43a2423bd6",
+      "deploy_url": "https://push-rbx-clevercloud-customers.services.clever-cloud.com/app_eeb6121a-65e3-4085-b85a-a56c986c680c.git",
+      "name": "potentiel-dev",
+      "alias": "potentiel-dev"
+    }
+  ]
+}
